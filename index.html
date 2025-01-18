@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head> 
+        <script src="js/index.js"></script>
+
         <title>PGC Early Birds Login</title>
     </head>
 
@@ -8,9 +10,9 @@
         <div id="score-submission-section">
             <h2>Score Submission</h2>
 
-            <form>
+            <div id="score-submission-form">
                 <label for="user-early-bird-number-input">Early Bird Number:</label>
-                <input type="text" id="user-early-bird-number-input" name="user-early-bird-number-input"> <br>
+                <input type="number" id="user-early-bird-number-input" name="user-early-bird-number-input"> <br>
 
                 <label for="user-tee-selector-input">Tee:</label>
                 <select>
@@ -20,12 +22,18 @@
                 </select> <br>
 
                 <label for="user-current-handicap-input">Current Handicap:</label>
-                <input type="text" id="user-current-handicap-input" name="user-current-handicap-input"> <br>
+                <input type="number" id="user-current-handicap-input" name="user-current-handicap-input"> <br>
 
                 <label for="user-score-input">Score:</label>
-                <input type="text" id="user-score-input" name="user-score-input"> <br>
-            </form>
+                <input type="number" id="user-score-input" name="user-score-input"> <br><br>
+
+                <button type="submit" onclick="submitScore()">Submit</button>
+            </div>
         </div>
+
+        <br><br><br>
+
+        <button type="button" onclick="toAdminLogin()">Admin Login</button>
 
     </body>
 </html>
